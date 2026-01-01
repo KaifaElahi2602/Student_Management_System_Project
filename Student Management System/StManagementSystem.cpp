@@ -2,6 +2,39 @@
 #include <fstream>
 #include <string>
 using namespace std;
+void addStudent()
+{
+    string id, roll, name, sclass, contact, address;
+    ofstream file("student.txt");
+
+    cout << "Enter Student ID: ";
+    getline(cin, id);
+
+    cout << "Enter Name: ";
+    getline(cin, name);
+
+    cout << "Enter Roll No: ";
+    getline(cin, roll);
+
+    cout << "Enter Class: ";
+    getline(cin, sclass);
+
+    cout << "Enter Contact No: ";
+    getline(cin, contact);
+
+    cout << "Enter Address: ";
+    getline(cin, address);
+
+    file << id << "," << name << "," << roll << "," 
+         << sclass << "," << contact << "," << address << endl;
+    file.close();
+
+    cout << "Student Added Successfully!\n";
+}
+
+
+
+
 void displayStudents()
 {
     string line, id, name, roll, sclass, contact, address;
@@ -61,5 +94,6 @@ int main()
 
     return 0;
 }
+
 
 
