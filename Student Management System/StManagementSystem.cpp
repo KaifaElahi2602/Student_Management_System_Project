@@ -5,7 +5,7 @@ using namespace std;
 void addStudent()
 {
     string id, roll, name, sclass, contact, address;
-    ofstream file("student.txt");
+    ofstream file("student.txt", ios::app);
 
     cout << "Enter Student ID: ";
     getline(cin, id);
@@ -94,6 +94,7 @@ int main()
 
     return 0;
 }
+
 
 
 
