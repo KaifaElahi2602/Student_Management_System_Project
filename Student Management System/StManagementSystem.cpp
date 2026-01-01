@@ -77,7 +77,9 @@ int main()
     {
         cout << "\n1. Add Student";
         cout << "\n2. Display Students";
-        cout << "\n3. Exit";
+        cout << "\n3. Search Students";
+        cout << "\n4. Delete Students";
+        cout << "\n5. Exit";
         cout << "\nEnter choice: ";
         cin >> choice;
         cin.ignore(); 
@@ -94,6 +96,7 @@ int main()
 
     return 0;
 }
+
 
 
 
