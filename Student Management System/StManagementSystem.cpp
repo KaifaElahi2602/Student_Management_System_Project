@@ -2,7 +2,37 @@
 #include <fstream>
 #include <string>
 using namespace std;
+void displayStudents()
+{
+    string line, id, name, roll, sclass, contact, address;
 
+    ifstream file("student.txt");
+    cout << "\n--- STUDENT RECORDS ---\n";
+
+    while (
+       
+        getline(file, id, ',') &&
+        getline(file, name, ',') &&
+        getline(file, roll, ',') &&
+        getline(file, sclass, ',') &&
+        getline(file, contact, ',') &&
+        getline(file, address) 
+       
+    )
+    {
+       
+
+        cout << "ID: " << id << endl;
+        cout << "Name: " << name << endl;
+        cout << "Roll No: " << roll << endl;
+        cout << "Class: " << sclass << endl;
+        cout << "Contact: " << contact << endl;
+        cout << "Address: " << address << endl;
+        cout << "----------------------\n";
+    }
+
+
+}
 
 
 
@@ -31,3 +61,4 @@ int main()
 
     return 0;
 }
+
