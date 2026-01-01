@@ -31,7 +31,7 @@ void displayStudents()
         cout << "----------------------\n";
     }
 
-
+    file.close();
 }
 
 
@@ -61,4 +61,5 @@ int main()
 
     return 0;
 }
+
 
