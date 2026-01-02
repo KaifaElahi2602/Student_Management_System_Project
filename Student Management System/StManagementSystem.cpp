@@ -117,7 +117,7 @@ void searchStudent()
     string idSearch;
     cout<<"Enter Student id you want to search: ";
     cin >> idSearch;
-    
+    cin.ignore();
 
     ifstream file("student.txt");
 
@@ -197,6 +197,7 @@ int main()
 
     return 0;
 }
+
 
 
 
