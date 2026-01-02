@@ -4,32 +4,35 @@
 using namespace std;
 void addStudent()
 {
-    string id, roll, name, sclass, contact, address;
-    ofstream file("student.txt", ios::app);
+string id, roll, name, sclass, contact, address;
+ofstream file("student.txt", ios::app);
+if (!file)
+    {
+        cout << "Error opening file!\n";
+        return;
+    }
+ cout << "Enter Student ID: ";
+ getline(cin, id);
 
-    cout << "Enter Student ID: ";
-    getline(cin, id);
+cout << "Enter Name: ";
+getline(cin, name);
 
-    cout << "Enter Name: ";
-    getline(cin, name);
+cout << "Enter Roll No: ";
+getline(cin, roll);
 
-    cout << "Enter Roll No: ";
-    getline(cin, roll);
+cout << "Enter Class: ";
+getline(cin, sclass);
 
-    cout << "Enter Class: ";
-    getline(cin, sclass);
+cout << "Enter Contact No: ";
+getline(cin, contact);
 
-    cout << "Enter Contact No: ";
-    getline(cin, contact);
+cout << "Enter Address: ";
+getline(cin, address);
 
-    cout << "Enter Address: ";
-    getline(cin, address);
-
-    file << id << "," << name << "," << roll << "," 
-         << sclass << "," << contact << "," << address << endl;
-    file.close();
-
-    cout << "Student Added Successfully!\n";
+file << id << "," << name << "," << roll << "," 
+<< sclass << "," << contact << "," << address << endl;
+file.close();
+cout << "Student Added Successfully!\n";
 }
 
 
@@ -184,6 +187,7 @@ int main()
 
     return 0;
 }
+
 
 
 
