@@ -174,8 +174,8 @@ int main()
         {
             case 1: addStudent(); break;
             case 2: displayStudents(); break;
-            case 3: searchStudents(); break;
-            case 4: deleteStudents(); break;
+            case 3: deleteStudents(); break;
+            case 4: searchStudents(); break;
             case 5: cout << "Bye!\n"; break;
             default: cout << "Invalid choice!\n";
         }
@@ -184,6 +184,7 @@ int main()
 
     return 0;
 }
+
 
 
 
