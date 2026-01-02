@@ -112,7 +112,61 @@ void deleteStudent()
 }
 
 
+void searchstudent()
+{
+    string idSearch;
+    cout<<"Enter Student id you want to search: ";
+    cin >> idSearch;
+    
 
+    ifstream file("student.txt");
+
+    string id, name, roll, sclass, contact, address;
+    bool found = false;
+
+    while (
+        getline(file, id, ',') &&
+        getline(file, name, ',') &&
+        getline(file, roll, ',') &&
+        getline(file, sclass, ',') &&
+        getline(file, contact, ',') &&
+        getline(file, address)&&
+    )
+    {
+        if (id == idSearch)
+        {
+            cout << id << " "
+                 << name << " "
+                 << roll << " "
+                 << sclass << " "
+                 << contact << " "
+                 << address << endl;
+            found = true;
+            break;
+        }
+    }
+
+    file.close();
+
+    if (!found)
+        cout << "Student ID not found\n";
+}
+
+int main()
+{
+    
+    int choice;
+
+    do
+    {
+        cout << "\n1. Add Student";
+        cout << "\n2. Display Students";
+         cout << "\n3. Delete Students";
+        cout << "\n4. Search Students";
+        cout << "\n5. Exit";
+        cout << "\nEnter choice: ";
+        cin >> choice;
+        cin.ignore();
 
 int main()
 {
@@ -143,6 +197,7 @@ int main()
 
     return 0;
 }
+
 
 
 
