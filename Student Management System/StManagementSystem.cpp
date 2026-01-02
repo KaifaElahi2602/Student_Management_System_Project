@@ -67,7 +67,7 @@ void displayStudents()
     file.close();
 }
 
-void deleteStudent()
+void deleteStudents()
 {
     string idDelete;
     cout << "Enter Student ID to delete: ";
@@ -197,6 +197,7 @@ int main()
 
     return 0;
 }
+
 
 
 
