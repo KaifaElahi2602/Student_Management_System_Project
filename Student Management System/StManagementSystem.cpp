@@ -71,7 +71,7 @@ void deleteStudent()
 {
     string idDelete;
     cout << "Enter Student ID to delete: ";
-    cin.getline();
+    cin>>idDelete;
 
     ifstream file("student.txt");
     ofstream temp("temp.txt");
@@ -143,6 +143,7 @@ int main()
 
     return 0;
 }
+
 
 
 
