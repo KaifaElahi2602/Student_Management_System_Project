@@ -88,7 +88,7 @@ void deleteStudent()
         getline(file, address)
     )
     {
-        if (sid == idDelete)
+        if (id == idDelete)
         {
             found = true;   
         }
@@ -143,6 +143,7 @@ int main()
 
     return 0;
 }
+
 
 
 
