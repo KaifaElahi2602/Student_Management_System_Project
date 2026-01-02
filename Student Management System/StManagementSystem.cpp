@@ -112,7 +112,7 @@ void deleteStudents()
 }
 
 
-void searchStudent()
+void searchStudents()
 {
     string idSearch;
     cout<<"Enter Student id you want to search: ";
@@ -197,6 +197,7 @@ int main()
 
     return 0;
 }
+
 
 
 
