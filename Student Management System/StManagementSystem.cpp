@@ -67,6 +67,51 @@ void displayStudents()
     file.close();
 }
 
+void deletestudent()
+{
+    string idDelete;
+    cout << "Enter Student ID to delete: ";
+    cin.getline();
+
+    ifstream file("student.txt");
+    ofstream temp("temp.txt");
+
+    string id, name, roll, sclass, contact, address;
+    bool found = false;
+
+    while (
+        getline(file, id, ',') &&
+        getline(file, name, ',') &&
+        getline(file, roll, ',') &&
+        getline(file, sclass, ',') &&
+        getline(file, contact, ',') &&
+        getline(file, address)&&
+    )
+    {
+        if (sid == idDelete)
+        {
+            found = true;   
+        }
+        else
+        {
+            temp << id << "," << name << "," << roll << ","
+                 << sclass << "," << contact << "," << address << endl;
+        }
+    }
+
+    file.close();
+    temp.close();
+
+    remove("student.txt");
+    rename("temp.txt", "student.txt");
+
+    if (found)
+        cout << "Student deleted successfully!\n";
+    else
+        cout << "Student ID not found!\n";
+}
+
+
 
 
 int main()
@@ -98,6 +143,7 @@ int main()
 
     return 0;
 }
+
 
 
 
