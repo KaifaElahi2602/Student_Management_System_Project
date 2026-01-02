@@ -85,7 +85,7 @@ void deleteStudent()
         getline(file, roll, ',') &&
         getline(file, sclass, ',') &&
         getline(file, contact, ',') &&
-        getline(file, address)&&
+        getline(file, address)
     )
     {
         if (sid == idDelete)
@@ -143,6 +143,7 @@ int main()
 
     return 0;
 }
+
 
 
 
