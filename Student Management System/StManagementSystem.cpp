@@ -130,7 +130,7 @@ void searchStudent()
         getline(file, roll, ',') &&
         getline(file, sclass, ',') &&
         getline(file, contact, ',') &&
-        getline(file, address)&&
+        getline(file, address)
     )
     {
         if (id == idSearch)
@@ -197,6 +197,7 @@ int main()
 
     return 0;
 }
+
 
 
 
